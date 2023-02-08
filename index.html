@@ -1,0 +1,93 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#ddlProductName,#ddlAge").on("change", function () {
+            var ProductName = $('#ddlProductName').find("option:selected").val();
+            var age = $('#ddlAge').find("option:selected").val();
+            SearchData(ProductName, age)
+        });
+    });
+    function SearchData(ProductName, age) {
+        if (ProductName.toUpperCase() == 'ALL' && age.toUpperCase() == 'ALL') {
+            $('#table11 tbody tr').show();
+        } else {
+            $('#table11 tbody tr:has(td)').each(function () {
+                var rowProductName = $.trim($(this).find('td:eq(1)').text());
+                var rowAge = $.trim($(this).find('td:eq(2)').text());
+                if (ProductName.toUpperCase() != 'ALL' && age.toUpperCase() != 'ALL') {
+                    if (rowProductName.toUpperCase() == ProductName.toUpperCase() && rowAge == age) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                } else if ($(this).find('td:eq(1)').text() != '' || $(this).find('td:eq(1)').text() != '') {
+                    if (ProductName != 'all') {
+                        if (rowProductName.toUpperCase() == ProductName.toUpperCase()) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    }
+                    if (age != 'all') {
+                        if (rowAge == age) {
+                            $(this).show();
+                        }
+                        else {
+                            $(this).hide();
+                        }
+                    }
+                }
+ 
+            });
+        }
+    }
+</script>
+<select class="cl_ProductName" id="ddlProductName">
+    <option value="all">License Type </option>
+    <option value="License">License</option>
+    <option value="Maintenance">Maintenance</option>
+    <option value="Support">Support</option>
+</select>
+<select class="cl_age" id="ddlAge">
+    <option value="all">Select Class </option>
+    <option value="50">50</option>
+    <option value="60">60</option>
+    <option value="80">80</option>
+</select>
+<table style="width: 100%" id="table11" border="1">
+    <tr>
+        <th>Product</th>
+        <th>License type</th>
+        <th>Volume discount</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>License, Maintenance, Support</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Support</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>License</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>sam</td>
+        <td>License</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>joe</td>
+        <td>License</td>
+        <td>60</td>
+    </tr>
+    <tr>
+        <td>alan</td>
+        <td>Maintenance</td>
+        <td>60</td>
+    </tr>
+</table>
