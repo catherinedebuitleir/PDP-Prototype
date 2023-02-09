@@ -21,9 +21,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- CSS Front Template -->
   <link rel="stylesheet" href="./assets/css/theme.min.css?v=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/regular.min.css" integrity="sha512-3YMBYASBKTrccbNMWlnn0ZoEOfRjVs9qo/dlNRea196pg78HaO0H/xPPO2n6MIqV6CgTYcWJ1ZB2EgWjeNP6XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/regular.min.css" integrity="sha512-3YMBYASBKTrccbNMWlnn0ZoEOfRjVs9qo/dlNRea196pg78HaO0H/xPPO2n6MIqV6CgTYcWJ1ZB2EgWjeNP6XA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
-  
+
 </script>
 
 
@@ -278,7 +279,7 @@
         <th style ="display: none">Language</th>
         <th style ="display: none">Version</th>
     </tr>
-    <tr>
+<tr class="clickRow">
         <td><i class="fas fa-chevron-down"></i></td>
         <td>Camtasia<br>SKU: CM99C-N-22</td>
         <td>License, <br>Maintenance, <br>Support</td>
@@ -289,7 +290,7 @@
           <td  style ="display: none">English</td>
          <td  style ="display: none">2022</td>
     </tr>
-        <tr>
+       <tr class="clickRow">
         <td><i class="fas fa-chevron-down"></i></td>
         <td>Camtasia<br>SKU: CM199G-N-22</td>
         <td>License, <br>Maintenance, <br>Support</td>
@@ -300,7 +301,7 @@
           <td  style ="display: none">French</td>
               <td style ="display: none">2022</td> 
     </tr>
-            <tr>
+            <tr class="clickRow">
         <td><i class="fas fa-chevron-down"></i></td>
         <td>Camtasia<br>SKU: CM499G-N-22-3</td>
         <td>License, <br>Maintenance, <br>Support</td>
@@ -311,18 +312,18 @@
           <td  style ="display: none">French</td>
               <td style ="display: none">2023</td> 
     </tr>
-                <tr>
+                <tr class="clickRow">
         <td><i class="fas fa-chevron-down"></i></td>
         <td>Camtasia<br>Camtasia<br>SKU: CM14G-N-22-3</td>
-        <td>License, <br>Maintenance, <br>Support</td>
+        <td>License</td>
          <td>400-499</td>
         <td>3 years</td>
         <td>$100</td>
-        <td><button type="button" class="btn btn-link">Select</button></td>
+        <td><button type="button" id="buttontable" class="btn btn-link">Select</button></td>
           <td  style ="display: none">Spanish</td>
               <td style ="display: none">2023</td> 
     </tr>
-                    <tr>
+                    <tr class="clickRow">
         <td><i class="fas fa-chevron-down"></i></td>
         <td>Camtasia<br>SKU: CAMS01-22</td>
         <td>License, <br>Maintenance, <br>Support</td>
@@ -334,6 +335,8 @@
               <td style ="display: none">2022</td> 
     </tr>
 </table>
+
+
             </div>
           </div>
           </div>
@@ -450,9 +453,9 @@
    <script src="./assets/js/vendor.min.js"></script>
    <script src="./assets/vendor/hs-scroll-nav/dist/hs-scroll-nav.min.js"></script>
 
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
    <!-- JS Front -->
    <script src="./assets/js/theme.min.js"></script>
@@ -468,9 +471,28 @@
 </body>
 </html>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript">
+
+     $( document ).ready(function() {
+
+ 
+  $("#table11").click(function() {
+
+      $(".clickRow").on("click",function(){
+       $(".highlight").removeClass("highlight");
+      $(this).addClass("highlight");
+
+                 
+
+      });
+});
+     })
+
+
+
     $(document).ready(function () {
+
+
         $("#ddlProductName,#ddlDuration,#ddlLanguage,#ddlVersion").on("change", function () {
             var ProductName = $('#ddlProductName').find("option:selected").val();
             var duration = $('#ddlDuration').find("option:selected").val();
@@ -538,6 +560,7 @@ $('#table11').on( 'click', 'tr', function () {
 } );
 
 
+
 $("#showOperatingsystem").click(function(){
   $("#operate").show();
 });
@@ -577,8 +600,10 @@ var quantitiy=0;
             if(quantity>0){
             $('#quantity').val(quantity - 1);
             }
-    });
-    
+    });   
+
 });
+
+
 </script>
 

@@ -17,78 +17,470 @@
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
+      <link rel="stylesheet" href="./assets/css/cat.css">
+        <link rel="stylesheet" href="./assets/css/vendor.min.css">
+          <link rel="stylesheet" href="./assets/css/theme.min.css?v=1.0">
   </head>
 
+
   <body>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+ <header id="header" class="header header-sticky-top-lg shadow-sm"
+            data-hs-header-options='{
+              "fixMoment": 1000,
+              "fixEffect": "slide"
+            }'>
+      <div class="header-section pt-2">
+  
+        <div id="logoAndNav" class="container-fluid">
+          <!-- Nav -->
+          <nav class="js-mega-menu navbar navbar-expand-lg">
+            <!-- Logo -->
+            <a class="navbar-brand" href="./index.html" aria-label="Marketplace.Goatpath.com">
+              <strong>Marketplace</strong><span class="text-dark">.Goatpath.com</span>
+            </a>
+            <!-- End Logo -->
+      
+            <!-- responsive menu -->
+            <div class="navbar-nav-wrap-content">
+              <!-- Responsive Toggle Button -->
+              <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle ml-2"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="navBar"
+                    data-toggle="collapse"
+                    data-target="#navBar">
+              <span class="navbar-toggler-default">
+                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+                </svg>
+              </span>
+              <span class="navbar-toggler-toggled">
+                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+                </svg>
+              </span>
+              </button>
+              <!-- End Responsive Toggle Button -->
             </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+            <!-- End responsive menu -->
+        
+            <!-- Search -->
+            <div class="input-group input-group-merge mx-5">
+              <span class="input-group-prepend input-group-text">
+                <span class="material-symbols-outlined">
+                  search
+                  </span>
+              </span>
+              <input type="text" class="form-control" id="searchAppsForm" placeholder="Search products, vendors or SKUs" aria-label="Search for apps">
+            </div>
+            <!-- End Search -->
+      
+
+            <!-- Navigation -->
+            <div id="navBar" class="collapse navbar-collapse" style="min-width:500px">
+              <div class="navbar-body header-abs-top-inner">
+                <ul class="navbar-nav">
+                  <li class="navbar-nav-item">
+                    <a class="nav-link"><span class="flag-icon flag-icon-us">
+                      <img src="https://marketplace-microapps-prod.azureedge.net/swo-marketplace-header/117c302b2663440b32e1.svg" />
+                    </span></a>
+                
+                  </li>
+                  <li class="navbar-nav-item">
+                    <a class="js-hs-unfold-invoker nav-link nav-link-toggle" href="javascript:;" data-toggle="modal" data-target="#addressModal">
+                      <span class="material-symbols-outlined">pin_drop</span>
+                      <span class="ml-2">
+                        <small class="d-block">Buying for</small>
+                        <strong>AdAstraflex Inc.</strong>
+                      </span>
+                    </a>
+               
+                  </li>
+                  <li class="hs-has-sub-menu navbar-nav-item">
+                    <a id="companyMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle "
+                      href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="companySubMenu">
+                      <span class="avatar avatar-xs avatar-primary avatar-circle">
+                        <span class="avatar-initials">RM</span>
+                      </span>
+                      <span class="ml-2">
+                        <span class="account-name">Reto M.</span>
+                        <small class="account-link">Account & More <span class="material-symbols-outlined">
+                          expand_more
+                          </span></small>
+                      </span>
+                      </a>
+
+                    <!-- Company - Submenu -->
+                    <div id="companySubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="companyMegaMenu" style="min-width: 230px;">
+                      <a class="dropdown-item " href="./orders.html">Orders</a>
+                      <a class="dropdown-item " href="./subscriptions.html">Subscriptions</a>
+                      <a class="dropdown-item " href="./business-settings.html">Business Settings</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="./log-out.html">Log out</a>
+                    </div>
+                    <!-- End Submenu -->
+                  </li>
+                  <li class="navbar-nav-item">
+                    <a class="nav-link"> <span class="material-symbols-outlined">shopping_cart</span></a>
+                  </li>
+            
+                </ul>
+              </div>
+            </div>
+            <!-- End Navigation -->
+          </nav>
+          <!-- End Nav -->
+        </div>
+
+        <div class="mp-tab-nav">
+          <ul class="nav nav-classic">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Buy Software</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./inventory.html">Inventory</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./settings.html">Settings</a>
+            </li>
+      
+          </ul>
+        </div>
       </div>
-    </nav>
+    </header>
 
-    <main role="main" class="container">
 
-      <div class="starter-template">
-<table class="table table-hover">
-    <thead>
-        <th></th><th></th><th></th>
-    </thead>
+  
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+
+  <main id="content" role="main">
     
-    <tbody>
-        <tr data-toggle="collapse" data-target="#accordion" class="clickable">
-            <td>Some Stuff</td>
-            <td>Some more stuff</td>
-            <td>And some more</td>
-        </tr>
+        <div class="container-fluid space-top-3 space-bottom-2">
+
+
+
+<div class="row">
+    <div class = "col-9">
+       <div class="card__standard">
+      <div class="row">
+        <div class="col-sm-2">
+          <img src="assets/img/camtasia.png" class="card-logo w-100 p-15">
+        </div>
+        <div class="col-sm-10">
+          <h1 class="">Camtasia</h3>
+          <p>By TechSmith</p>
+          <p>Video creation and editing</p>
+            <ul class="fa-ul">
+    <li><i class="fas fa-check"></i> Prebuilt templates & creation of custom templates</li>
+    <li><i class="fas fa-check"></i> Share templates, libraries, themes, shortcuts, favourites, and presets in a single file</li>
+    <li><i class="fas fa-check"></i> Favourites & Presets for instance access </li>
+    <li><i class="fas fa-check"></i> Drag-and-drop editing</li>
+     <li><i class="fas fa-check"></i> Web Camera update</li>
+  </ul>
+  </div>
+  </div>
+<div class ="row">
+<div class="col-12">
+     <p>Camtasia makes it simple to record and create professional-looking videos on Windows and Mac.</p><br></br>
+     <hr></hr>
+          <h4 class="mt-5 mb-15">Select a product</h4>
+          <div class="row">
+            <div class="col-12">
+              <div class = "row" style ="align-items: center;">
+              <div class = "col">
+                  <div class="form-group">
+      <label for="">License type</label>
+<select class="cl_ProductName" id="ddlProductName">
+    <option value="all">License Type </option>
+    <option value="License">License</option>
+    <option value="Maintenance">Maintenance</option>
+    <option value="Support">Support</option>
+    <option value = "License, Maintenance, Support">License,Maintenance, Support</option>
+</select>
+    </div>
+</div>
+<div class = "col">
+    <div class="form-group">
+      <label for="">Duration</label>
+<select class="cl_duration" id="ddlDuration">
+    <option value="all">Duration </option>
+    <option value="1 year">1 year</option>
+    <option value="2 years">2 years</option>
+    <option value="3 years">3 years</option>
+        <option value="Support">Support</option>
+</select>
+    </div>
+</div>
+<div class = "col">
+    <div class="form-group">
+      <label for="">Language</label>
+<select class="cl_language" id="ddlLanguage">
+    <option value="all">Language </option>
+    <option value="Multilingual">Multilingual</option>
+    <option value="English">English</option>
+    <option value="French">French</option>
+        <option value="Spanish">Spanish</option>     
+</select>
+    </div>
+    </div>
+
+<div class = "col">
+<div class="dropdown">
+  <button type="button" class="btn btn-outline-primary" data-toggle="dropdown">
+   More
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" id="showOperatingsystem" href="#">Operating system</a>
+    <a class="dropdown-item" id="showVersion"  href="#">Version</a>
+  </div>
+</div>
+    </div>
+    <div class = "col">
+        <div class="form-group" id ="operate" style="display:none">
+      <label for="">Operating system</label>
+<select class="cl_operating" id="ddlOperating">
+    <option value="all">Language </option>
+    <option value="Multilingual">Mac</option>
+    <option value="English">Windows</option>  
+</select>
+    </div>
+    </div>
+        <div class = "col">
+            <div class="form-group" id ="version" style="display:none">
+       <label for="">Version</label>
+<select class="cl_version" id="ddlVersion">
+    <option value="all">all</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>  
+</select>
+    </div>
+    </div>
+</div>
+<table style="width: 100%" id="table11">
+    <tr>
+      <th></th>
+        <th>Product</th>
+        <th>License type</th>
+        <th>Volume Discount</th>
+        <th>Duration</th>
+        <th>Price by user</th>
+        <th></th>
+        <th style ="display: none">Language</th>
+        <th style ="display: none">Version</th>
+    </tr>
+    <tr>
+        <td><i class="fas fa-chevron-down"></i></td>
+        <td>Camtasia<br>SKU: CM99C-N-22</td>
+        <td>License, <br>Maintenance, <br>Support</td>
+         <td>50 -99</td>
+        <td>1 year</td>
+        <td>$100</td>
+        <td><button type="button" id ="buttontable" class="btn btn-link">Select</button></td>
+          <td  style ="display: none">English</td>
+         <td  style ="display: none">2022</td>
+    </tr>
         <tr>
-            <td colspan="3">
-                <div id="accordion" class="collapse">Hidden by default</div>
-            </td>
-        </tr>
-    </tbody>
+        <td><i class="fas fa-chevron-down"></i></td>
+        <td>Camtasia<br>SKU: CM199G-N-22</td>
+        <td>License, <br>Maintenance, <br>Support</td>
+         <td>100-199</td>
+        <td>1 years</td>
+        <td>$100</td>
+        <td><button type="button" class="btn btn-link">Select</button></td>
+          <td  style ="display: none">French</td>
+              <td style ="display: none">2022</td> 
+    </tr>
+            <tr>
+        <td><i class="fas fa-chevron-down"></i></td>
+        <td>Camtasia<br>SKU: CM499G-N-22-3</td>
+        <td>License, <br>Maintenance, <br>Support</td>
+         <td>10-14</td>
+        <td>3 years</td>
+        <td>$100</td>
+        <td><button type="button" class="btn btn-link">Select</button></td>
+          <td  style ="display: none">French</td>
+              <td style ="display: none">2023</td> 
+    </tr>
+                <tr>
+        <td><i class="fas fa-chevron-down"></i></td>
+        <td>Camtasia<br>Camtasia<br>SKU: CM14G-N-22-3</td>
+        <td>License</td>
+         <td>400-499</td>
+        <td>3 years</td>
+        <td>$100</td>
+        <td><button type="button" class="btn btn-link">Select</button></td>
+          <td  style ="display: none">Spanish</td>
+              <td style ="display: none">2023</td> 
+    </tr>
+                    <tr>
+        <td><i class="fas fa-chevron-down"></i></td>
+        <td>Camtasia<br>SKU: CAMS01-22</td>
+        <td>License, <br>Maintenance, <br>Support</td>
+         <td>50 -99</td>
+        <td>2 years</td>
+        <td>$100</td>
+        <td><button type="button" class="btn btn-link">Select</button></td>
+          <td  style ="display: none">French</td>
+              <td style ="display: none">2022</td> 
+    </tr>
 </table>
+  <table id="infoTable" class="table table-fixed table-condensed">
+    <thead>
+      <tr>
+        <th class="col-xs-3">Name</th>
+        <th class="col-xs-3">Age</th>
+        <th class="col-xs-6">Occupation</th>
+        <th class="col-xs-6">Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="clickableRow">
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">43</td>
+        <td class="col-xs-6">School Teacher</td>
+        <td class="col-xs-6">$43,000</td>
+      </tr>
+      <tr class="clickableRow">
+        <td class="col-xs-3">Tim</td>
+        <td class="col-xs-3">52</td>
+        <td class="col-xs-6">Plumber</td>
+        <td class="col-xs-6">$55,000</td>
+      </tr>
+      <tr class="clickableRow">
+        <td class="col-xs-3">John</td>
+        <td class="col-xs-3">43</td>
+        <td class="col-xs-6">School Teacher</td>
+        <td class="col-xs-6">$43,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+</div>
+    <div class = "col-3"><div class="card__standard">
+      <h4 class=""><b>Camtasia</b></h4>
+      <p class="">SKU: CM99C-N-22</p>
+      <h4 class=""><b>212.90 Per User</b></h4>
+      <p>Select quantity</p>
+      <div class="row mt-3 align-items-center">
+        <div class="col-sm-9">
+
+
+                                        <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-outline-secondary quantity-left-minus btn btn-number"  data-type="minus" data-field="">
+                                         -
+                                        </button>
+                                    </span>
+                                    <input type="text" id="quantity" name="quantity" class="form-control input-number" value="10" min="1" max="100">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-outline-secondary quantity-right-plus btn-number" data-type="plus" data-field="">
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+        </div>
       </div>
+      <hr class="hr" />
+            <h5 class=""><b>Total</b></h5>
+      <h2><b>$10,000</b></h2>
+<button type="button" class="btn btn-primary btn-lg btn-block">Add to cart</button>
+    </div></div>
+</div>
+        </div>
 
-    </main><!-- /.container -->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+   
+
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- End Change Address Modal -->
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container space-2">
+      <div class="row mb-5">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <!-- Logo -->
+          <a href="index.html" aria-label="Gaelchultúr">
+            <img class="brand" src="https://marketplace-microapps-prod.azureedge.net/swo-marketplace-footer/a355c943aa766905e90a.svg" alt="Logo">
+          </a>
+          <!-- End Logo -->
+        
+          <!-- Nav Link -->
+          <ul class="nav nav-sm nav-x-0 flex-column mt-3">
+            <li class="nav-item mb-3">
+              <span style="font-size: 0.875rem;">
+                SoftwareONE<br>
+                20875 Crossroads Circle, Suite 1<br>
+                53186 Waukesha WI
+              </span>
+            </li>
+            <li class="nav-item mb-3">
+              <small class="">Registered number<br>
+                630113</small>
+            </li>
+            <li class="nav-item mb-3">
+              <small class="">Registered country<br>
+                United States</small>
+            </li>
+            <li class="nav-item">
+              <small class="">SoftwareONE®</small>
+            </li>
+          </ul>
+          <!-- End Nav Link -->
+        </div>
+
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h5 class="font-weight-bold">SoftwareONE</h5>
+          <!-- Nav Links -->
+          <ul class="nav nav-sm nav-x-0 flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Terms and conditions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
+          </ul>
+          <!-- End Nav Links -->
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="font-weight-bold">Marketplace</h5>
+          <!-- Nav Links -->
+          <ul class="nav nav-sm nav-x-0 flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Terms of use</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Help and support</a></li>
+          
+          </ul>
+          <!-- End Nav Links -->
+        </div>
+
+      
+      </div>
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+
+ 
+
+   <!-- JS Implementing Plugins -->
+   <script src="./assets/js/vendor.min.js"></script>
+   <script src="./assets/vendor/hs-scroll-nav/dist/hs-scroll-nav.min.js"></script>
+
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
-</html>
+
+   <!-- JS Front -->
+   <script src="./assets/js/theme.min.js"></script>
+
 
    <!-- IE Support -->
    <script>
@@ -96,145 +488,63 @@
    </script>
 
   
-   <!-- JS Plugins Init. -->
-  <script>
-    $(document).on('ready', function () {
-      // INITIALIZATION OF HEADER
-      // =======================================================
-      var header = new HSHeader($('#header')).init();
-
-      // INITIALIZATION OF MEGA MENU
-      // =======================================================
-      var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
-        desktop: {
-          position: 'left'
-        }
-      }).init();
-
-      // INITIALIZATION OF TEXT ANIMATION (TYPING)
-      // =======================================================
-      var typed = $.HSCore.components.HSTyped.init(".js-text-animation");
-
-      // INITIALIZATION OF SLICK CAROUSEL
-      // =======================================================
-      $('.js-slick-carousel').each(function() {
-        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
-      });
-
-      // INITIALIZATION OF UNFOLD
-      // =======================================================
-      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
-
-      // INITIALIZATION OF UNFOLD
-      // =======================================================
-      $('.js-hs-search-unfold-invoker').each(function() {
-        var searchUnfold = new HSUnfold($(this), {
-          afterOpen: function() {
-            $('#searchSlideDownControl').focus();
-          }
-        }).init();
-      });
-
-      // INITIALIZATION OF AOS
-      // =======================================================
-      AOS.init({
-        duration: 650,
-        once: true
-      });
-
-      // INITIALIZATION OF FORM VALIDATION
-      // =======================================================
-      $('.js-validate').each(function() {
-        $.HSCore.components.HSValidation.init($(this), {
-          rules: {
-            confirmPassword: {
-              equalTo: '#signupPassword'
-            }
-          }
-        });
-      });
-
-      // INITIALIZATION OF SHOW ANIMATIONS
-      // =======================================================
-      $('.js-animation-link').each(function () {
-        var showAnimation = new HSShowAnimation($(this)).init();
-      });
-
-      // INITIALIZATION OF FANCYBOX
-      // =======================================================
-      $('.js-fancybox').each(function () {
-        var fancybox = $.HSCore.components.HSFancyBox.init($(this));
-      });
-
-      // INITIALIZATION OF COUNTER
-      // =======================================================
-      $('.js-counter').each(function() {
-        var counter = new HSCounter($(this)).init();
-      });
-    
-      // INITIALIZATION OF GO TO
-      // =======================================================
-      $('.js-go-to').each(function () {
-        var goTo = new HSGoTo($(this)).init();
-      });
-
-      // INITIALIZATION OF KUTE.JS
-      //=========================================================
-      var morphTween1 = KUTE.fromTo('#Vector1', {path: '#Vector1'}, {path: '#Vector2'}, {
-        duration: 2000, easing: 'easingCubicOut'
-      }).start();
-      var morphTween2 = KUTE.fromTo('#Vector1', {path: '#Vector2'}, {path: '#Vector3'}, {
-        duration: 2000, delay: 500 , easing: 'easingCubicOut'
-      });
-      var morphTween3 = KUTE.fromTo('#Vector1', {path: '#Vector3'}, {path: '#Vector4'}, {
-        duration: 2000, delay: 500, easing: 'easingCubicOut'
-      });
-      var morphTween4 = KUTE.fromTo('#Vector1', {path: '#Vector4'}, {path: '#Vector5'}, {
-        duration: 2000, delay: 500, easing: 'easingCubicOut'
-      });
-      var morphTween5 = KUTE.fromTo('#Vector1', {path: '#Vector5'}, {path: '#Vector1'}, {
-        duration: 2000, delay: 500, easing: 'easingCubicOut'
-      });
-
-      try{
-          morphTween1.chain(morphTween2);
-          morphTween2.chain(morphTween3);
-          morphTween3.chain(morphTween4);
-          morphTween4.chain(morphTween5);
-          morphTween5.chain(morphTween1);
-        }catch(e){
-          console.error(e+"TweenBase doesn\'t support chain method")
-        }
-
-    });
-  </script>
 
 </body>
 </html>
 
+ <!-- JS Implementing Plugins -->
+   <script src="./assets/js/vendor.min.js"></script>
+   <script src="./assets/vendor/hs-scroll-nav/dist/hs-scroll-nav.min.js"></script>
+
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+   <!-- JS Front -->
+   <script src="./assets/js/theme.min.js"></script>
+
+
+   <!-- IE Support -->
+   <script>
+     if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="./assets/vendor/babel-polyfill/dist/polyfill.js"><\/script>');
+     $('#infoTable').on('click', 'tbody tr', function(event) {
+  $(this).addClass('highlight').siblings().removeClass('highlight');
+});
+   </script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript">
+
+
+
+
+
     $(document).ready(function () {
-        $("#ddlProductName,#ddlDuration").on("change", function () {
+
+
+        $("#ddlProductName,#ddlDuration,#ddlLanguage,#ddlVersion").on("change", function () {
             var ProductName = $('#ddlProductName').find("option:selected").val();
             var duration = $('#ddlDuration').find("option:selected").val();
-            SearchData(ProductName, duration)
+            var language = $('#ddlLanguage').find("option:selected").val();
+            var versionchoice = $('#ddlVersion').find("option:selected").val();
+            SearchData(ProductName, duration, language, versionchoice)
         });
     });
-    function SearchData(ProductName, duration) {
-        if (ProductName.toUpperCase() == 'ALL' && duration.toUpperCase() == 'ALL') {
+    function SearchData(ProductName, duration, language, versionchoice) {
+        if (ProductName.toUpperCase() == 'ALL' && duration.toUpperCase() == 'ALL' && language.toUpperCase() == 'ALL' && versionchoice.toUpperCase() == 'ALL') {
             $('#table11 tbody tr').show();
         } else {
             $('#table11 tbody tr:has(td)').each(function () {
-                var rowProductName = $.trim($(this).find('td:eq(0)').text());
-                var rowduration = $.trim($(this).find('td:eq(2)').text());
-                if (ProductName.toUpperCase() != 'ALL' && duration.toUpperCase() != 'ALL') {
-                    if (rowProductName.toUpperCase() == ProductName.toUpperCase() && rowduration == duration) {
+                var rowProductName = $.trim($(this).find('td:eq(2)').text());
+                var rowduration = $.trim($(this).find('td:eq(4)').text());
+                var rowlanguage = $.trim($(this).find('td:eq(7)').text());
+                var rowchoice = $.trim($(this).find('td:eq(8)').text());
+                if (ProductName.toUpperCase() != 'ALL' && duration.toUpperCase() != 'ALL' && language.toUpperCase() != 'ALL' && versionchoice.toUpperCase() != 'ALL') {
+                    if (rowProductName.toUpperCase() == ProductName.toUpperCase() && rowduration == duration && rowlanguage == language && rowchoice == versionchoice)  {
                         $(this).show();
                     } else {
                         $(this).hide();
                     }
-                } else if ($(this).find('td:eq(0)').text() != '' || $(this).find('td:eq(0)').text() != '') {
+                } else if ($(this).find('td:eq(2)').text() != '' || $(this).find('td:eq(2)').text() != '') {
                     if (ProductName != 'all') {
                         if (rowProductName.toUpperCase() == ProductName.toUpperCase()) {
                             $(this).show();
@@ -250,44 +560,84 @@
                             $(this).hide();
                         }
                     }
+                     if (language != 'all') {
+                        if (rowlanguage == language) {
+                            $(this).show();
+                        }
+                        else {
+                            $(this).hide();
+                        }
+                    }
+                    if (versionchoice != 'all') {
+                        if (rowchoice == versionchoice) {
+                            $(this).show();
+                        }
+                        else {
+                            $(this).hide();
+                        }
+                    }
+
                 }
  
             });
         }
     }
+
+$('#table11').on( 'click', 'tr', function () {
+    $(this).toggleClass('active');
+} );
+
+
+$('#buttontable').on('click','tr', function(event) {
+  $(this).addClass('highlight').siblings().removeClass('highlight');
+});
+
+$("#showOperatingsystem").click(function(){
+  $("#operate").show();
+});
+
+$("#showVersion").click(function(){
+  $("#version").show();
+});
+
+$(document).ready(function(){
+
+var quantitiy=0;
+   $('.quantity-right-plus').click(function(e){
+        
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        var quantity = parseInt($('#quantity').val());
+        
+        // If is not undefined
+            
+            $('#quantity').val(quantity + 1);
+
+          
+            // Increment
+        
+    });
+
+     $('.quantity-left-minus').click(function(e){
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        var quantity = parseInt($('#quantity').val());
+        
+        // If is not undefined
+      
+            // Increment
+            if(quantity>0){
+            $('#quantity').val(quantity - 1);
+            }
+    });   
+
+});
+
+
 </script>
-<select class="cl_ProductName" id="ddlProductName">
-    <option value="all">License Type </option>
-    <option value="License">License</option>
-    <option value="Maintenance">Maintenance</option>
-    <option value="Support">Support</option>
-     <option value="Camtasia1">Camtasia2</option>
-</select>
-<select class="cl_duration" id="ddlDuration">
-    <option value="all">Duration </option>
-    <option value="1 year">1 year</option>
-    <option value="2 years">2 years</option>
-    <option value="3 years">3 years</option>
-</select>
-<table style="width: 100%" id="table11" border="1">
-    <tr>
-        <th>Product</th>
-        <th>License type</th>
-        <th>Duration</th>
-    </tr>
-    <tr>
-        <td>Camtasia1</td>
-        <td>License, Maintenance, Support</td>
-        <td>1 year</td>
-    </tr>
-    <tr>
-        <td>Camtasia2</td>
-        <td>Support</td>
-        <td>2 years</td>
-    </tr>
-        <tr>
-        <td>Camtasia3</td>
-        <td>Maintenance</td>
-        <td>3 years</td>
-    </tr>
-</table>
+
+
+
+  

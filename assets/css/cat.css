@@ -51,3 +51,8 @@ table.dataTable tbody tr.odd.selected {
     margin-right: 40px;
 
    }
+  
+   .highlight{
+    background-color: #eaecff;
+    
+    }
