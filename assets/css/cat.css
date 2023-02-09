@@ -36,4 +36,18 @@ table.dataTable tbody tr.odd.selected {
    padding: 10px;
    z-index: 0;
    font-size: 14px;
+   width:250px;
+   }
+
+   label, select {
+
+        display:flex;
+        flex-direction:column;
+
+   }
+
+   .form-group {
+
+    margin-right: 40px;
+
    }
