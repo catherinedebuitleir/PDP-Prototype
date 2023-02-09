@@ -201,32 +201,45 @@
     <option value="1 year">1 year</option>
     <option value="2 years">2 years</option>
     <option value="3 years">3 years</option>
+        <option value="Support">Support</option>
 </select>
-<table style="width: 100%" id="table11" border="1">
+<table style="width: 100%" id="table11">
     <tr>
+      <th></th>
         <th>Product</th>
         <th>License type</th>
+        <th>Volume Discount</th>
         <th>Duration</th>
+        <th>Price by user</th>
+        <th></th>
     </tr>
-    <tr data-toggle="collapse" data-target="#accordion" class="clickable">
-        <td>Camtasia1</td>
-        <td>License, Maintenance, Support</td>
+    <tr>
+        <td>test</td>
+        <td>Camtasia<br>SKU: CM99C-N-22</td>
+        <td>License, <br>Maintenance, <br>Support</td>
+         <td>50 -99</td>
         <td>1 year</td>
+        <td>$100</td>
+        <td><button type="button" class="btn btn-link">Select</button></td>
     </tr>
             <tr>
-            <td colspan="3">
-                <div id="accordion" class="collapse">Hidden by default</div>
-            </td>
-        </tr>
     <tr>
+           <td>test</td>
         <td>Camtasia2</td>
         <td>Support</td>
+         <td>50 -99</td>
         <td>2 years</td>
+        <td>$130</td>
+     <td><button type="button" class="btn btn-link">Select</button></td>
     </tr>
         <tr>
+               <td>test</td>
         <td>Camtasia3</td>
         <td>Maintenance</td>
+         <td>50 -99</td>
         <td>3 years</td>
+        <td>$80</td>
+        <td><button type="button" class="btn btn-link">Select</button></td>
     </tr>
 </table>
             </div>
@@ -280,62 +293,6 @@
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
 
- <!-- ========== SECONDARY CONTENTS ========== -->
-  <!-- Change Address Modal -->
-  <div class="modal fade" id="addressModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button type="button" class="close position-absolute top-0 right-0 z-index-2 mt-3 mr-3" data-dismiss="modal" aria-label="Close">
-          <svg aria-hidden="true" class="mb-0" width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
-          </svg>
-        </button>
-        <div class="modal-header">
-          <h5 class="modal-title">Select an address</h5>
-       
-        </div>
-        <!-- Body -->
-        <div class="modal-body">
-          <p class="small">Only addresses that have been verified using a valid tax identification number and company number will be displayed here.</p>
-          <ul class="list-unstyled" style="height: 16rem; overflow-y: auto;">
-            <li class="form-check py-3 px-5 border border-primary rounded">
-              <input type="radio" id="formRadio1" class="form-check-input" name="formRadio" checked>
-              <label class="form-check-label" for="formRadio1">
-                <strong>AdAstraflex Inc. Global Headquarters</strong>, 123 West Washington Road, CHICAGO, IL, 60606, USA
-              </label>
-            </li>
-            <li class="form-check py-3 px-5 border rounded">
-              <input type="radio" id="formRadio2" class="form-check-input" name="formRadio">
-              <label class="form-check-label" for="formRadio2">
-                <strong>AdAstraflex Inc. Global Headquarters</strong>, 123 West Washington Road, CHICAGO, IL, 60606, USA
-              </label>
-            </li>
-            <li class="form-check py-3 px-5 border rounded">
-              <input type="radio" id="formRadio3" class="form-check-input" name="formRadio">
-              <label class="form-check-label" for="formRadio3">
-                <strong>AdAstraflex Inc. Global Headquarters</strong>, 123 West Washington Road, CHICAGO, IL, 60606, USA
-              </label>
-            </li>
-            <li class="form-check py-3 px-5 border rounded">
-              <input type="radio" id="formRadio4" class="form-check-input" name="formRadio">
-              <label class="form-check-label" for="formRadio4">
-                <strong>AdAstraflex Inc. Global Headquarters</strong>, 123 West Washington Road, CHICAGO, IL, 60606, USA
-              </label>
-            </li>
-          </ul>
-
-        </div>
-        <!-- End Body -->
-        <div class="modal-footer justify-content-between">
-          <a href="./settings.html">Manage Address Book</a>
-          <span>
-            <button class="btn btn-primary">Confirm</button>
-            <button class="btn btn-outline-primary">Cancel</button>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- End Change Address Modal -->
   <!-- ========== END SECONDARY CONTENTS ========== -->
 
@@ -423,118 +380,6 @@
    </script>
 
   
-   <!-- JS Plugins Init. -->
-  <script>
-    $(document).on('ready', function () {
-      // INITIALIZATION OF HEADER
-      // =======================================================
-      var header = new HSHeader($('#header')).init();
-
-      // INITIALIZATION OF MEGA MENU
-      // =======================================================
-      var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
-        desktop: {
-          position: 'left'
-        }
-      }).init();
-
-      // INITIALIZATION OF TEXT ANIMATION (TYPING)
-      // =======================================================
-      var typed = $.HSCore.components.HSTyped.init(".js-text-animation");
-
-      // INITIALIZATION OF SLICK CAROUSEL
-      // =======================================================
-      $('.js-slick-carousel').each(function() {
-        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
-      });
-
-      // INITIALIZATION OF UNFOLD
-      // =======================================================
-      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
-
-      // INITIALIZATION OF UNFOLD
-      // =======================================================
-      $('.js-hs-search-unfold-invoker').each(function() {
-        var searchUnfold = new HSUnfold($(this), {
-          afterOpen: function() {
-            $('#searchSlideDownControl').focus();
-          }
-        }).init();
-      });
-
-      // INITIALIZATION OF AOS
-      // =======================================================
-      AOS.init({
-        duration: 650,
-        once: true
-      });
-
-      // INITIALIZATION OF FORM VALIDATION
-      // =======================================================
-      $('.js-validate').each(function() {
-        $.HSCore.components.HSValidation.init($(this), {
-          rules: {
-            confirmPassword: {
-              equalTo: '#signupPassword'
-            }
-          }
-        });
-      });
-
-      // INITIALIZATION OF SHOW ANIMATIONS
-      // =======================================================
-      $('.js-animation-link').each(function () {
-        var showAnimation = new HSShowAnimation($(this)).init();
-      });
-
-      // INITIALIZATION OF FANCYBOX
-      // =======================================================
-      $('.js-fancybox').each(function () {
-        var fancybox = $.HSCore.components.HSFancyBox.init($(this));
-      });
-
-      // INITIALIZATION OF COUNTER
-      // =======================================================
-      $('.js-counter').each(function() {
-        var counter = new HSCounter($(this)).init();
-      });
-    
-      // INITIALIZATION OF GO TO
-      // =======================================================
-      $('.js-go-to').each(function () {
-        var goTo = new HSGoTo($(this)).init();
-      });
-
-      // INITIALIZATION OF KUTE.JS
-      //=========================================================
-      var morphTween1 = KUTE.fromTo('#Vector1', {path: '#Vector1'}, {path: '#Vector2'}, {
-        duration: 2000, easing: 'easingCubicOut'
-      }).start();
-      var morphTween2 = KUTE.fromTo('#Vector1', {path: '#Vector2'}, {path: '#Vector3'}, {
-        duration: 2000, delay: 500 , easing: 'easingCubicOut'
-      });
-      var morphTween3 = KUTE.fromTo('#Vector1', {path: '#Vector3'}, {path: '#Vector4'}, {
-        duration: 2000, delay: 500, easing: 'easingCubicOut'
-      });
-      var morphTween4 = KUTE.fromTo('#Vector1', {path: '#Vector4'}, {path: '#Vector5'}, {
-        duration: 2000, delay: 500, easing: 'easingCubicOut'
-      });
-      var morphTween5 = KUTE.fromTo('#Vector1', {path: '#Vector5'}, {path: '#Vector1'}, {
-        duration: 2000, delay: 500, easing: 'easingCubicOut'
-      });
-
-      try{
-          morphTween1.chain(morphTween2);
-          morphTween2.chain(morphTween3);
-          morphTween3.chain(morphTween4);
-          morphTween4.chain(morphTween5);
-          morphTween5.chain(morphTween1);
-        }catch(e){
-          console.error(e+"TweenBase doesn\'t support chain method")
-        }
-
-    });
-  </script>
 
 </body>
 </html>
@@ -553,15 +398,15 @@
             $('#table11 tbody tr').show();
         } else {
             $('#table11 tbody tr:has(td)').each(function () {
-                var rowProductName = $.trim($(this).find('td:eq(1)').text());
-                var rowduration = $.trim($(this).find('td:eq(2)').text());
+                var rowProductName = $.trim($(this).find('td:eq(2)').text());
+                var rowduration = $.trim($(this).find('td:eq(4)').text());
                 if (ProductName.toUpperCase() != 'ALL' && duration.toUpperCase() != 'ALL') {
                     if (rowProductName.toUpperCase() == ProductName.toUpperCase() && rowduration == duration) {
                         $(this).show();
                     } else {
                         $(this).hide();
                     }
-                } else if ($(this).find('td:eq(1)').text() != '' || $(this).find('td:eq(1)').text() != '') {
+                } else if ($(this).find('td:eq(2)').text() != '' || $(this).find('td:eq(2)').text() != '') {
                     if (ProductName != 'all') {
                         if (rowProductName.toUpperCase() == ProductName.toUpperCase()) {
                             $(this).show();
@@ -582,4 +427,9 @@
             });
         }
     }
+
+$('#table11').on( 'click', 'tr', function () {
+    $(this).toggleClass('active');
+} );
 </script>
+

@@ -9,3 +9,31 @@
     box-shadow: 0 8px 16px 0 rgba(96, 97, 112, 0.16), 0 2px 4px 0 rgba(40, 41, 61, 0.04);
 
 }
+
+table {
+    border: none !important;
+}
+
+
+tr {
+    border-bottom: solid;
+    border-color: #cdcdcd;
+}
+
+table.dataTable tbody tr.odd.selected {
+    background-color:#acbad4
+   }
+    
+   table.dataTable tbody tr.even.selected {
+    background-color:#acbad5
+   }
+
+
+   select {
+    border-radius: 8px!important;
+   border: 2px solid #ccd1d9;
+   box-shadow: none;
+   padding: 10px;
+   z-index: 0;
+   font-size: 14px;
+   }
