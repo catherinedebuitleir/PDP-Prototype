@@ -52,7 +52,8 @@ table.dataTable tbody tr.odd.selected {
 
    }
   
-   .highlight{
+   table tr.selected {
     background-color: #eaecff;
-    
-    }
+    border-color: #472aff;
+    border: 5px;
+}
