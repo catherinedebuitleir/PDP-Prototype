@@ -283,11 +283,11 @@
     </tr>
 <tr class="clickRow">
         <td><i class="fas fa-chevron-down"></i></td>
-        <td>al<br>SKU: CM99C-N-22</td>
+        <td>Camtasia<br>SKU: CM99C-N-22</td>
         <td>License, <br>Maintenance, <br>Support</td>
          <td>50 -99</td>
         <td>1 year</td>
-        <td>$100</td>
+        <td>$212.90</td>
         <td><button type="button" class="btn btn-link">Select</button></td>
           <td  style ="display: none">English</td>
          <td  style ="display: none">2022</td>
@@ -298,18 +298,18 @@
         <td>License, <br>Maintenance, <br>Support</td>
          <td>100-199</td>
         <td>1 years</td>
-        <td>$100</td>
+        <td>$184.92</td>
         <td><button type="button" class="btn btn-link">Select</button></td>
           <td  style ="display: none">French</td>
               <td style ="display: none">2022</td> 
     </tr>
             <tr class="clickRow">
         <td><i class="fas fa-chevron-down"></i></td>
-        <td>ala<br>SKU: CM499G-N-22-3</td>
+        <td>Camtasia<br>SKU: CM499G-N-22-3</td>
         <td>License, <br>Maintenance, <br>Support</td>
          <td>10-14</td>
         <td>3 years</td>
-        <td>$100</td>
+        <td>$288.88</td>
         <td><button type="button" class="btn btn-link">Select</button></td>
           <td  style ="display: none">French</td>
               <td style ="display: none">2023</td> 
@@ -320,7 +320,7 @@
         <td>License</td>
          <td>400-499</td>
         <td>3 years</td>
-        <td>$100</td>
+        <td>$211.86</td>
         <td><button type="button" id="buttontable" class="btn btn-link">Select</button></td>
           <td  style ="display: none">Spanish</td>
               <td style ="display: none">2023</td> 
@@ -348,7 +348,7 @@
     <div class = "col-3"><div class="card__standard">
       <h4 class=""><b>Camtasia</b></h4>
       <p class="">SKU: CM99C-N-22</p>
-      <h4 class=""><b>212.90 Per User</b></h4>
+      <h4 class=""><b id ="cost2">212.90</b> Per User</b></h4>
       <p>Select quantity</p>
       <div class="row mt-3 align-items-center">
         <div class="col-sm-9">
@@ -371,7 +371,7 @@
       </div>
       <hr class="hr" />
             <h5 class=""><b>Total</b></h5>
-      <h2><b>$10,000</b></h2>
+      <h2><b id ="cost">$10,000</b></h2>
 <button type="button" class="btn btn-primary btn-lg btn-block">Add to cart</button>
     </div></div>
 </div>
@@ -474,6 +474,18 @@
 </html>
 
 <script type="text/javascript">
+
+
+$('tbody tr').click(function () {
+    // Get the first td
+    var periodStart = $(this).closest('tr').children('td:eq(5)').text();
+    $("#cost").text(periodStart)
+    $("#cost2").text(periodStart)
+
+});
+
+
+
 
         $("tbody tr").click(function () {
             $('.selected').removeClass('selected');
