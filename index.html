@@ -200,8 +200,7 @@
           <h4 class="mt-5 mb-15">Select a product</h4>
           <div class="row">
             <div class="col-12">
-              <div class = "row" style ="align-items: center;">
-              <div class = "col">
+              <div class = "row" style ="align-items: center;position: relative;width: 100%;padding-right: 15px;padding-left: 15px;">
 
 
                   <div class="form-group">
@@ -215,9 +214,6 @@
 </select>
     </div>
 
-
-</div>
-<div class = "col">
     <div class="form-group">
       <label for="">Duration</label>
 <select class="cl_duration" id="ddlDuration">
@@ -228,8 +224,6 @@
         <option value="Support">Support</option>
 </select>
     </div>
-</div>
-<div class = "col">
     <div class="form-group">
       <label for="">Language</label>
 <select class="cl_language" id="ddlLanguage">
@@ -240,9 +234,24 @@
         <option value="Spanish">Spanish</option>     
 </select>
     </div>
+
+        <div class="form-group" id ="operate" style="display:none">
+      <label for="">Operating system</label>
+<select class="cl_operating" id="ddlOperating">
+    <option value="all">Language </option>
+    <option value="Multilingual">Mac</option>
+    <option value="English">Windows</option>  
+</select>
+    </div>
+            <div class="form-group" id ="version" style="display:none">
+       <label for="">Version</label>
+<select class="cl_version" id="ddlVersion">
+    <option value="all">all</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>  
+</select>
     </div>
 
-<div class = "col">
 <div class="dropdown">
   <button type="button" class="btn btn-outline-primary" data-toggle="dropdown">
    More
@@ -252,27 +261,6 @@
     <a class="dropdown-item" id="showVersion"  href="#">Version</a>
   </div>
 </div>
-    </div>
-    <div class = "col">
-        <div class="form-group" id ="operate" style="display:none">
-      <label for="">Operating system</label>
-<select class="cl_operating" id="ddlOperating">
-    <option value="all">Language </option>
-    <option value="Multilingual">Mac</option>
-    <option value="English">Windows</option>  
-</select>
-    </div>
-    </div>
-        <div class = "col">
-            <div class="form-group" id ="version" style="display:none">
-       <label for="">Version</label>
-<select class="cl_version" id="ddlVersion">
-    <option value="all">all</option>
-    <option value="2022">2022</option>
-    <option value="2023">2023</option>  
-</select>
-    </div>
-    </div>
 </div>
 <table style="width: 100%" id="table11" class="table">
     <tr>

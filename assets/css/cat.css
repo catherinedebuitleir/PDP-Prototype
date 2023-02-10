@@ -60,7 +60,7 @@ table.dataTable tbody tr.odd.selected {
 
 select {
     display: block;
-    width: 100%;
+    width: 250px;
     font-size: 1em;
     padding: 0.8rem 0.5rem;
     font-family: inherit;
