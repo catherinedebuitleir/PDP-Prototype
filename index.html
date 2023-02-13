@@ -220,7 +220,7 @@
 
     <div class="form-group">
       <label for="">Duration</label>
-<select class="cl_duration" id="ddlDuration">
+<select name="basic[]" multiple="multiple" class="cl_duration" id="ddlDuration">
     <option value="all">Duration </option>
     <option value="1 year">1 year</option>
     <option value="2 years">2 years</option>
@@ -605,14 +605,9 @@ var quantitiy=0;
 
 <script>
 
-$('#ddlProductName',).multiselect({
-    columns: 1,
-    texts: {
-        placeholder: 'Select options'
-    }
-})
+$('#ddlProductName').multiselect({ columns: 2 })
 
-
+$('#ddlDuration').multiselect({ columns: 2 })
 </script>
 </body>
 </html>
